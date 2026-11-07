@@ -14,3 +14,4 @@
 #contract .copy-panel::before,#contract .copy-panel::after{opacity:.40}
 .burn-card::after{content:'';position:absolute;inset:0 auto 0 0;width:30%;background:url('assets/print-owl.png') left -35px center/auto 130% no-repeat;opacity:.22;pointer-events:none;z-index:-1}
 
+#contract .copy-panel::after{background-image:url('assets/print-cactus.png');background-position:right -20px center;background-size:auto 130%}
