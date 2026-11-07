@@ -88,3 +88,4 @@ sky.addEventListener('load',measure);
 
 
 document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',event=>{const id=link.getAttribute('href').slice(1);const target=document.getElementById(id);if(!target||id==='top')return;event.preventDefault();const top=target.offsetTop+target.offsetHeight/2-window.innerHeight/2;history.replaceState(null,'','#'+id);window.scrollTo({top:Math.max(0,top),behavior:reduced.matches?'instant':'smooth'});}));
+const flyby=document.querySelector('.flyby-zone');const plane=flyby.querySelector('.flyby-plane');const planeObserver=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){plane.classList.add('flying');planeObserver.disconnect()}},{threshold:.3});planeObserver.observe(flyby);
