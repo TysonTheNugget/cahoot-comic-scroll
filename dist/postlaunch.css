@@ -24,3 +24,5 @@
 
 #legend .copy-panel::before{background-image:url('assets/prints6.png');background-position:left center;background-size:contain;opacity:.27}
 #tokenomics .mission-copy::after{background-image:url('assets/print7.png');background-position:right center;background-size:contain;opacity:.25}
+#legend .copy-panel::before{background-image:url('assets/print-owl.png');background-position:left center;background-size:auto 100%;opacity:.3}
+#legend .copy-panel::after{background-image:url('assets/prints6.png');background-position:right center;background-size:contain;transform:none;opacity:.3}
