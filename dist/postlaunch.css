@@ -52,3 +52,8 @@
 .horse-brown{left:83.12820512820512%;width:13.8vw;top:calc(100% - 28.933649289099534svh);z-index:3}
 .horse-white{left:79.53846153846153%;width:12.6vw;top:calc(100% - 30.118483412322306svh);z-index:1}
 }
+
+@media(max-width:700px){
+.horse-brown{left:84.92307692307692%;width:13.8vw;top:calc(100% - 24.075829383886287svh);z-index:1}
+.horse-white{left:81.33333333333333%;width:12.6vw;top:calc(100% - 25.379146919431292svh);z-index:1}
+}
