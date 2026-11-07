@@ -64,3 +64,4 @@
 @media(max-width:700px){#tokenomics .mission-copy::before{background-position:left 75%}}
 .burn-card::after{background:url("assets/prints5.png") left 10px bottom 10px / min(25%, 150px) auto no-repeat;inset:0;width:auto;opacity:.16}.burn-card::before{background-size:auto 75%;background-position:right bottom;opacity:.12}@media(max-width:700px){.burn-card::after{background-size:100px auto;background-position:left 8px bottom 8px}.burn-card::before{background-size:auto 45%;background-position:right bottom}}
 @media(max-width:700px){#legend .copy-panel::before{background-size:auto 35%;background-position:left center}}
+.burn-card::before,.burn-card::after{content:none}
