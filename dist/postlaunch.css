@@ -38,3 +38,4 @@
 #legend .copy-panel::before{width:35%;background-size:auto 60%;background-position:left center}
 #legend .copy-panel::before{background-size:auto 52%}
 #tokenomics .mission-copy::before{inset:0;width:100%;background-image:url('assets/print-lock.png');background-size:100% auto;background-position:center;opacity:.23}#tokenomics .mission-copy::after{content:none}
+#tokenomics .mission-copy::before{background-size:contain}
