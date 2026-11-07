@@ -30,3 +30,4 @@
 #legend .copy-panel::after{background-position:right -45px center;background-size:auto 135%}
 #legend .copy-panel::before{background-image:url('assets/print7.png');background-position:left -65px center;background-size:auto 110%;opacity:.3}
 #legend .copy-panel::after{background-image:url('assets/prints6.png');background-position:left -5px center;background-size:auto 120%;transform:none;opacity:.3}
+#legend .legend-divider{display:flex;align-items:center;justify-content:center;gap:10px;margin:16px auto;color:#a76a3a;font-size:14px;max-width:150px}#legend .legend-divider::before,#legend .legend-divider::after{content:'';height:1px;flex:1;background:currentColor}#legend .legend-divider+p{margin-top:0}
