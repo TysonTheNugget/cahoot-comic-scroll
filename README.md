@@ -19,10 +19,11 @@ Open http://localhost:8000. Deploy the `dist` directory as a static site. `verce
 ## Where to make changes
 
 - `dist/index.html` contains the page content, layout, and CSS, including responsive rules.
-- `dist/app.js` controls the scroll animation, flying owls, sprite frames, and moving sky.
+- `dist/app.js` controls the scroll animation, orbiting owls with alternating depth, sprite frames, and moving sky.
+- `dist/refinements.css` styles the logo hero, readable parchment panels, supply chart, and responsive orbit layout.
 - `dist/assets/` contains the original sprite sheets, logo, and sky images. `sky-hd-v4.png` is the current 1920 × 5760 sky; earlier sky assets preserve prior artwork.
 
-The sky is displayed at its natural proportions and moves as the page scrolls. The flying owl sprite sheets use a 6 × 6 grid. The campfire animation uses a separate 6 × 6 sheet. The owls fade out as the campfire appears. On mobile, the campfire is positioned near the bottom and the footer disclaimer is hidden; keep the desktop disclaimer unless instructed otherwise. Respect reduced-motion preferences.
+The current high-resolution sky is constrained to the original 1:3 viewport-width display scale and moves as the page scrolls. The official X link is https://x.com/justcahoot. The supply chart shows a planned 10% lock with a 36-degree slice; launch/lock proof has not yet been provided. The flying owl sprite sheets use a 6 × 6 grid. The campfire animation uses a separate 6 × 6 sheet. The owls fade out as the campfire appears. On mobile, the campfire is positioned near the bottom and the footer disclaimer is hidden; keep the desktop disclaimer unless instructed otherwise. Respect reduced-motion preferences.
 
 ## Content and project facts
 
@@ -35,6 +36,7 @@ Check the experience at desktop and mobile sizes, including the sky, scroll tran
 ## Deployment
 
 Import this GitHub repository into Vercel with the included configuration, or run `vercel --prod` from the repository root. The site is static and does not require environment variables.
+
 
 
 

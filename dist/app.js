@@ -24,14 +24,14 @@ document.querySelectorAll('[data-letters]').forEach(heading => {
 });
 const clamp = (v, min=0, max=1) => Math.max(min, Math.min(max,v));
 const ease = v => v*v*(3-2*v);
-let lastFrame = -1, geometry = [], campTop = 0, height = innerHeight, end = 1;
-function measure(){height=innerHeight;geometry=stories.map(el=>({el,top:el.parentElement.offsetTop,size:el.parentElement.offsetHeight}));campTop=camp.offsetTop;end=document.documentElement.scrollHeight-height;lettering.forEach(item=>{item.top=0;for(let node=item.heading;node;node=node.offsetParent){item.top+=node.offsetTop;}});}
+let lastFrame = -1, geometry = [], campTop = 0, height = innerHeight, end = 1, skyTravel=0, screenWidth=innerWidth;
+function measure(){height=innerHeight;screenWidth=document.documentElement.clientWidth;skyTravel=Math.max(0,sky.offsetHeight-height);geometry=stories.map(el=>({el,top:el.parentElement.offsetTop,size:el.parentElement.offsetHeight}));campTop=camp.offsetTop;end=document.documentElement.scrollHeight-height;lettering.forEach(item=>{item.top=0;for(let node=item.heading;node;node=node.offsetParent){item.top+=node.offsetTop;}});}
 let startedAt;
+const panels=[...document.querySelectorAll('.copy-panel')];
 function render(time){
  startedAt ??= time;
  const y=scrollY;
- const travel = Math.max(0, document.documentElement.clientWidth * 3 - height);
- sky.style.transform = `translate3d(0,${-clamp(y/end)*travel}px,0)`;
+ sky.style.transform = `translate3d(0,${-clamp(y/end)*skyTravel}px,0)`;
  const landing=ease(clamp((y+height*.8-campTop)/(height*.5)));
  geometry.forEach(({el,top,size},i)=>{
   const offset=(top+size*.5-y-height*.5)/height;
@@ -41,7 +41,7 @@ function render(time){
  });
  lettering.forEach(({chars,top},index)=>{
   // Reveal while the headline travels from 72% to 28% of the viewport.
-  const entry=index===0?clamp((time-startedAt-150)/1300):clamp((y+height*.72-top)/(height*.44));
+  const entry=clamp((y+height*.72-top)/(height*.44));
   chars.forEach((char,i)=>{
    const p=reduced.matches?1:ease(clamp((entry-i/chars.length*.48)/.52));
    const direction=i%2?1:-1;
@@ -50,11 +50,21 @@ function render(time){
   });
  });
  owls.forEach((owl,i)=>{
-  const bob=reduced.matches?0:Math.sin(time/750+i*2)*10;
-  const drift=reduced.matches?0:Math.sin(y/680+i)*14;
-  owl.style.opacity=1-landing;
+  const angle=reduced.matches?i*Math.PI:(time-startedAt)/5500+y/700+i*Math.PI;
+  const depth=(Math.sin(angle)+1)/2;
+  const radiusX=screenWidth*(screenWidth<700?.37:.39);
+  const radiusY=height*(screenWidth<700?.40:.43);
+  const x=Math.cos(angle)*radiusX;
+  const vertical=reduced.matches?0:Math.sin(angle)*radiusY;
+  const scale=reduced.matches?.8:(.5+depth*.7)*(1-landing*.2);
+  owl.style.opacity=(1-landing)*(.65+depth*.35);
+  // Pass behind the readable signs even during the foreground half of the orbit.
+  const owlX=screenWidth/2+x,owlY=height/2+vertical;
+  const radius=(screenWidth<700?85:Math.min(190,screenWidth*.13))*scale*.55;
+  const crossesText=panels.some(panel=>{const r=panel.getBoundingClientRect();return owlX+radius>r.left&&owlX-radius<r.right&&owlY+radius>r.top&&owlY-radius<r.bottom;});
+  owl.style.zIndex=depth>.48&&!crossesText?'3':'0';
   owl.style.visibility=landing>=1?'hidden':'visible';
-  owl.style.transform=`translate3d(${drift+(i?-1:1)*landing*innerWidth*.18}px,${bob+landing*height*.22}px,0) rotate(${reduced.matches?0:Math.sin(time/1200+i)*3}deg) scale(${1-landing*.22})`;
+  owl.style.transform=`translate(-50%,-50%) translate3d(${x*(1-landing*.6)}px,${vertical+landing*height*.25}px,0) rotate(${reduced.matches?0:Math.sin(angle+.6)*12}deg) scale(${scale})`;
  });
  const frame=reduced.matches?0:Math.floor(time/75)%36;
  if(frame!==lastFrame){sprites.forEach(s=>{
@@ -72,4 +82,6 @@ function render(time){
 }
 addEventListener('resize',measure,{passive:true});
 addEventListener('load',measure);document.fonts.ready.then(measure);measure();requestAnimationFrame(render);
+sky.addEventListener('load',measure);
+
 
