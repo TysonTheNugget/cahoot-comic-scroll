@@ -20,7 +20,7 @@ Open http://localhost:8000. Deploy the `dist` directory as a static site. `verce
 
 - `dist/index.html` contains the page content, layout, and CSS, including responsive rules.
 - `dist/app.js` controls the scroll animation, flying owls, sprite frames, and moving sky.
-- `dist/assets/` contains the original sprite sheets, logo, and sky images. `sky-hd-v3.png` is the current 1920 × 5760 sky; earlier sky assets preserve prior artwork.
+- `dist/assets/` contains the original sprite sheets, logo, and sky images. `sky-hd-v4.png` is the current 1920 × 5760 sky; earlier sky assets preserve prior artwork.
 
 The sky is displayed at its natural proportions and moves as the page scrolls. The flying owl sprite sheets use a 6 × 6 grid. The campfire animation uses a separate 6 × 6 sheet. The owls fade out as the campfire appears. On mobile, the campfire is positioned near the bottom and the footer disclaimer is hidden; keep the desktop disclaimer unless instructed otherwise. Respect reduced-motion preferences.
 
@@ -35,5 +35,6 @@ Check the experience at desktop and mobile sizes, including the sky, scroll tran
 ## Deployment
 
 Import this GitHub repository into Vercel with the included configuration, or run `vercel --prod` from the repository root. The site is static and does not require environment variables.
+
 
 
