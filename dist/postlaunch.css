@@ -66,4 +66,9 @@
 @media(max-width:700px){#legend .copy-panel::before{background-size:auto 35%;background-position:left center}}
 .burn-card::before,.burn-card::after{content:none}
 .flyby-zone{height:55svh;min-height:300px;position:relative;overflow:hidden;pointer-events:none}.flyby-plane{position:absolute;top:40%;left:0;width:clamp(320px,44vw,640px);aspect-ratio:740/178;background:url('assets/plane-sheet.png') 0 0/600% 600% no-repeat;transform:translateX(-110%);visibility:hidden}.flyby-plane.flying{visibility:visible;animation:plane-pass 9s linear forwards}@keyframes plane-pass{from{transform:translateX(-110%)}to{transform:translateX(calc(100vw + 10%))}}@media(prefers-reduced-motion:reduce){.flyby-plane.flying{animation-duration:.01s}}
-.rocket-zone{height:55svh;min-height:300px;position:relative;overflow:hidden;pointer-events:none}.rocket{position:absolute;left:30%;top:55%;width:clamp(100px,13vw,180px);aspect-ratio:380/642;background:url('assets/rocket-sheet.png') 0 0/600% 600% no-repeat;visibility:hidden}.rocket.launch{visibility:visible;animation:rocket-away 5s ease-in forwards}@keyframes rocket-away{0%{opacity:1;transform:translate(0,0) scale(1)}85%{opacity:1}100%{opacity:0;transform:translate(30vw,-30svh) scale(.08)}}@media(prefers-reduced-motion:reduce){.rocket.launch{animation-duration:.01s}}
+/* A small launch vignette: hover, accelerate, disappear into the sky. */
+.rocket-zone{height:75svh;min-height:520px;max-height:760px;position:relative;overflow:hidden;pointer-events:none;isolation:isolate}
+.rocket{position:absolute;left:0;top:0;width:clamp(100px,12vw,155px);aspect-ratio:380/642;background:url('assets/rocket-sheet.png') 0 0/600% 600% no-repeat;transform-origin:center;opacity:0;z-index:2;will-change:transform,opacity}
+.rocket-trail{position:absolute;inset:0;z-index:1}.rocket-puff{position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:#ffe7b5;opacity:0;box-shadow:0 0 14px #ef792a66;will-change:transform,opacity}
+.rocket-glint{position:absolute;left:0;top:0;font-size:28px;color:#fff1cf;opacity:0;transform-origin:center}
+@media(max-width:700px){.rocket-zone{height:68svh;min-height:470px}.rocket{width:105px}}
