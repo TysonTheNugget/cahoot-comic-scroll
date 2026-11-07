@@ -47,3 +47,8 @@
 .camp-art{z-index:2}.placed-horse{position:absolute;background-size:600% 600%;background-repeat:no-repeat;aspect-ratio:1.12;pointer-events:none}
 .horse-brown{left:83.98425196850393%;width:12.8vw;top:calc(100% - 43.70370370370374svh);z-index:3;background-image:url("assets/horse-brown.png")}
 .horse-white{left:80.07349081364829%;width:11vw;top:calc(100% - 46.98412698412703svh);z-index:1;background-image:url("assets/horse-white.png")}
+
+@media(max-width:700px){
+.horse-brown{left:83.12820512820512%;width:13.8vw;top:calc(100% - 28.933649289099534svh);z-index:3}
+.horse-white{left:79.53846153846153%;width:12.6vw;top:calc(100% - 30.118483412322306svh);z-index:1}
+}
