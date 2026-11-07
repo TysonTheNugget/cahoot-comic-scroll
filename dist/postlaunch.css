@@ -21,10 +21,6 @@
 #legend .copy-panel::before{background-image:url("assets/print-cactus.png");background-position:left -20px center;background-size:auto 135%}#legend .copy-panel::after{background-image:url("assets/print-owl.png");background-position:right -20px center;background-size:auto 135%;transform:scaleX(-1)}
 .supply-detail{display:block;font-size:.65em;line-height:1.4;margin-top:14px;text-align:center}
 @media all{.world{min-height:0}}
-/* Give each story card its own western illustrations. */
-.hero-copy::before{background-image:url('assets/prints4.png');background-position:left center;background-size:auto 135%;opacity:.5}
-.hero-copy::after{background-image:url('assets/prints5.png');background-position:right -15px center;background-size:auto 110%;opacity:.3}
-#legend .copy-panel::before{background-image:url('assets/prints6.png');background-position:left -25px center;background-size:auto 145%}
-#tokenomics .mission-copy::before{background-image:url('assets/print7.png');background-position:left -20px center;background-size:auto 140%;opacity:.25}
-#tokenomics .mission-copy::after{background-image:url('assets/print-desert.png')}
-.burn-card::after{background-image:url('assets/print-cactus.png');background-position:left -20px center;background-size:auto 130%}
+
+#legend .copy-panel::before{background-image:url('assets/prints6.png');background-position:left center;background-size:contain;opacity:.27}
+#tokenomics .mission-copy::after{background-image:url('assets/print7.png');background-position:right center;background-size:contain;opacity:.25}
