@@ -42,3 +42,4 @@
 #tokenomics .mission-copy::before{background-position:left center}
 #tokenomics .mission-copy::before{background-image:url('assets/print-lock-wide.png');background-position:left center;background-size:100% auto}
 #tokenomics .mission-copy::before{background-size:90% auto}
+#tokenomics .mission-copy::before{background-image:url('assets/print-lock-extended.png');background-size:100% auto;background-position:left center}
