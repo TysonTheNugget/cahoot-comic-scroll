@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lilita+One&display=swap');
-:root{--ink:#241b15;--paper:#fff3d3;--orange:#ff8a24}
+:root{--ink:#241b15;--paper:#ffe7b5;--orange:#ff8a24}
 body{font-family:'Lilita One',sans-serif;font-weight:400}::selection{background:#ffbd35;color:#241b15}
 .navigation{font-size:17px;font-weight:400}.brand{font-family:'Lilita One',sans-serif;font-size:29px}.visit{background:var(--paper);border:3px solid var(--ink);box-shadow:3px 4px 0 var(--ink);transform:rotate(2deg)}
 .chapter{height:120svh;min-height:850px}.hero{height:100svh;min-height:760px}.story,.hero .story{width:min(850px,68vw)}
@@ -11,10 +11,19 @@ h1{font-size:clamp(65px,8vw,118px)}h2{font-size:clamp(60px,6.8vw,100px)}
 .status{font-family:'Gochi Hand',cursive;font-size:19px!important;letter-spacing:0;line-height:1.3;margin-top:22px!important;font-weight:400}
 .actions{font-size:18px;gap:22px;margin-top:25px;font-weight:400}.primary,.secondary{padding:12px 22px;border:3px solid var(--ink);border-radius:8px;background:var(--orange);color:var(--ink);box-shadow:4px 5px 0 var(--ink);transition:transform .15s}.secondary{background:var(--paper);transform:rotate(2deg)}.primary:hover,.secondary:hover{transform:translateY(-3px) rotate(-2deg)}
 .scroll-note{font-family:'Gochi Hand',cursive;font-size:23px;bottom:25px;transform:rotate(-4deg)}
-.night .story>p{color:var(--paper);text-shadow:1px 2px 0 #241b15}.night h2{color:#ffca50}
-.mission-details{border-top:0;gap:30px;margin-top:25px;padding-top:0;font-family:'Gochi Hand',cursive;font-size:20px}.mission-details strong{font-family:'Lilita One',sans-serif;font-size:34px;color:#ffca50;-webkit-text-stroke:1px var(--ink);paint-order:stroke fill}
+.night .story>p{color:var(--paper);text-shadow:1px 2px 0 #241b15}.night h2{color:var(--paper)}
+.mission-details{border-top:0;gap:30px;margin-top:25px;padding-top:0;font-family:'Gochi Hand',cursive;font-size:20px}.mission-details strong{font-family:'Lilita One',sans-serif;font-size:34px;color:var(--paper);-webkit-text-stroke:1px var(--ink);paint-order:stroke fill}
 .story .small{font-family:'Gochi Hand',cursive;font-size:19px;line-height:1.35;max-width:500px}.contract-box{font-size:19px;border:3px solid var(--ink);background:var(--paper);color:var(--ink);border-radius:9px;box-shadow:5px 6px 0 var(--ink);padding:19px}.contract-box button{color:var(--ink);border:2px solid var(--ink);font-size:15px}
 .camp-heading{font-family:'Gochi Hand',cursive;font-size:32px;transform:rotate(-3deg);text-shadow:2px 2px 0 var(--ink)}.camp-link{font-size:20px}.footer{font-family:'DM Sans',sans-serif}.owl{width:clamp(105px,16vw,230px)}
 @media(max-width:700px){.navigation{left:18px;right:18px;gap:12px}.brand{font-size:23px}.navlinks{font-size:13px;gap:12px}.chapter{height:115svh;min-height:810px;padding:95px 20px 175px}.hero{height:100svh;min-height:740px}.story,.hero .story{width:100%;max-width:500px}h1{font-size:clamp(58px,15vw,88px)}h2{font-size:clamp(48px,12.3vw,76px);-webkit-text-stroke:2px;text-shadow:3px 4px 0 var(--ink)}.story>p{font-size:23px;line-height:1.25;max-width:350px;margin-top:22px}.story>.intro{font-size:27px;max-width:320px}.actions{font-size:15px;gap:14px}.primary,.secondary{padding:11px 15px}.status{font-size:17px!important}.owl{top:77%;width:98px}.mission-details{font-size:17px;gap:20px}.mission-details strong{font-size:29px}.story .small{font-size:18px}.contract-box{font-size:17px;padding:14px;gap:10px}.contract-box button{font-size:13px;padding:9px}.camp-heading{font-size:28px}.camp-art{bottom:3%}.scroll-note{font-size:20px;bottom:20px}}
 @media(prefers-reduced-motion:reduce){.letter,.word{transform:none!important;opacity:1!important}.primary,.secondary{transition:none}}
 #legend .story>p{color:var(--paper);text-shadow:1px 2px 0 var(--ink)} @media(max-width:700px){.scroll-note{color:var(--paper);text-shadow:1px 2px 0 var(--ink)}.owl{top:84%;width:88px}#legend .story>p{font-size:21px;margin-top:20px}#legend .story .quote{font-size:29px!important;margin-top:22px!important}}
+
+/* The logo illustration has transparent edges; never outline its image box. */
+.camp-logo,.brand img{outline:none!important;border:0;box-shadow:none}
+.brand{display:block;flex:0 0 auto}.brand img{display:block;width:155px;height:auto}
+.navlinks{gap:0;background:var(--paper);border:3px solid var(--ink);border-radius:9px;box-shadow:3px 4px 0 var(--ink);overflow:hidden}
+.navlinks a{display:block;padding:12px 20px;transition:background-color .15s}
+.navlinks a+a{border-left:2px solid var(--ink)}.navlinks a:hover{background:#ffbd35;opacity:1}
+@media(max-width:700px){.navigation{top:18px;left:14px;right:14px;gap:10px}.brand img{width:96px}.navlinks{border-width:2px;border-radius:6px}.navlinks a{padding:10px 9px;font-size:12px}.navlinks a+a{border-left-width:1px}.hero .story>.intro{font-size:26px}.hero .status{max-width:300px} }
+@media(max-width:360px){.brand img{width:80px}.navlinks a{padding:9px 7px;font-size:11px}}
