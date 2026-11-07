@@ -72,3 +72,7 @@
 .rocket-trail{position:absolute;inset:0;z-index:1}.rocket-puff{position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:#ffe7b5;opacity:0;box-shadow:0 0 14px #ef792a66;will-change:transform,opacity}
 .rocket-glint{position:absolute;left:0;top:0;font-size:28px;color:#fff1cf;opacity:0;transform-origin:center}
 @media(max-width:700px){.rocket-zone{height:68svh;min-height:470px}.rocket{width:105px}}
+.shooting-star-zone{height:32svh;min-height:220px;max-height:340px;position:relative;overflow:hidden;pointer-events:none}
+.shooting-star{position:absolute;left:12%;top:20%;width:4px;height:4px;opacity:0;transform-origin:2px 2px;color:#fff1cf}
+.shooting-star::before{content:'';position:absolute;right:0;top:1px;width:clamp(90px,15vw,210px);height:2px;background:linear-gradient(90deg,transparent,#ffc26a 75%,#fff1cf);box-shadow:0 0 8px #ffc26a55}
+.shooting-star-head{position:absolute;font-size:21px;line-height:1;left:-8px;top:-8px;text-shadow:0 0 12px #ffd999}
