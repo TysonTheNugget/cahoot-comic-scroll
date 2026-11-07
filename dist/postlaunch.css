@@ -22,12 +22,14 @@
 .supply-detail{display:block;font-size:.65em;line-height:1.4;margin-top:14px;text-align:center}
 @media all{.world{min-height:0}}
 
-#legend .copy-panel::before{background-image:url('assets/prints6.png');background-position:left center;background-size:contain;opacity:.27}
-#tokenomics .mission-copy::after{background-image:url('assets/print7.png');background-position:right center;background-size:contain;opacity:.25}
+#legend .copy-panel::before{background-image:url('assets/print-cactus.png');background-position:left center;background-size:contain;opacity:.27}
+#tokenomics .mission-copy::after{background-image:url('assets/print-cactus.png');background-position:right center;background-size:contain;opacity:.25}
 #legend .copy-panel::before{background-image:url('assets/print-owl.png');background-position:left center;background-size:auto 100%;opacity:.3}
-#legend .copy-panel::after{background-image:url('assets/prints6.png');background-position:right center;background-size:contain;transform:none;opacity:.3}
+#legend .copy-panel::after{background-image:url('assets/print-cactus.png');background-position:right center;background-size:contain;transform:none;opacity:.3}
 #legend .copy-panel::before{background-position:left -35px center;background-size:auto 150%}
 #legend .copy-panel::after{background-position:right -45px center;background-size:auto 135%}
-#legend .copy-panel::before{background-image:url('assets/print7.png');background-position:left -65px center;background-size:auto 110%;opacity:.3}
-#legend .copy-panel::after{background-image:url('assets/prints6.png');background-position:left -5px center;background-size:auto 120%;transform:none;opacity:.3}
+#legend .copy-panel::before{background-image:url('assets/print-cactus.png');background-position:left -65px center;background-size:auto 110%;opacity:.3}
+#legend .copy-panel::after{background-image:url('assets/print-cactus.png');background-position:left -5px center;background-size:auto 120%;transform:none;opacity:.3}
 #legend .legend-divider{display:flex;align-items:center;justify-content:center;gap:10px;margin:16px auto;color:#a76a3a;font-size:14px;max-width:150px}#legend .legend-divider::before,#legend .legend-divider::after{content:'';height:1px;flex:1;background:currentColor}#legend .legend-divider+p{margin-top:0}
+
+#legend .copy-panel::before{background-image:url('assets/prints10.png');background-position:left center;background-size:contain;opacity:.3}#legend .copy-panel::after{background-image:url('assets/prints9.png');background-position:right center;background-size:contain;opacity:.3;transform:none}
