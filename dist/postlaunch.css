@@ -35,3 +35,4 @@
 #legend .copy-panel::before{background-image:url('assets/prints10.png');background-position:left center;background-size:contain;opacity:.3}#legend .copy-panel::after{background-image:url('assets/prints9.png');background-position:right center;background-size:contain;opacity:.3;transform:none}
 .burn-line{white-space:nowrap;font-size:clamp(15px,2.1vw,27px)} @media(max-width:700px){.burn-line{font-size:clamp(11px,3.1vw,20px)}}
 #legend .copy-panel::before{background-size:contain;width:35%}
+#legend .copy-panel::before{width:35%;background-size:auto 60%;background-position:left center}
