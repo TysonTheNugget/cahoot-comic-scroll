@@ -1,6 +1,6 @@
 /* Keep the new artwork in the original 1:3, viewport-width presentation. */
 .sky-art{width:100%;height:auto;aspect-ratio:1/3;min-height:0;object-fit:contain;outline:none}
-.hero-title{line-height:1;transform:rotate(1deg)}.hero-logo{display:block;width:min(720px,100%);height:auto;margin:auto;outline:none;border:0;box-shadow:none}
+.hero-title{line-height:1;transform:none}.hero-logo{display:block;width:min(720px,100%);height:auto;margin:auto;outline:none;border:0;box-shadow:none}
 .follow-x{font-family:'Lilita One',sans-serif;font-size:17px;color:var(--ink);background:var(--paper);border:3px solid var(--ink);border-radius:8px;padding:12px 15px;box-shadow:3px 4px 0 var(--ink);text-decoration:none;flex-shrink:0}.follow-x:disabled{cursor:default}
 .copy-panel{background:var(--paper);color:#46200e;border:3px solid #46200e;border-radius:14px 8px 15px 9px;box-shadow:5px 6px 0 #46200e;padding:24px 30px;margin:28px auto 0;max-width:620px;text-shadow:none;font-size:25px;line-height:1.35}
 .copy-panel p{margin:0}.copy-panel p+p{margin-top:22px}.copy-panel .small{margin:20px auto 0}.copy-panel .quote{margin-top:20px!important;color:#46200e}
