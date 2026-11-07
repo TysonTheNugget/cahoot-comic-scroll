@@ -43,3 +43,7 @@
 #tokenomics .mission-copy::before{background-image:url('assets/print-lock-wide.png');background-position:left center;background-size:100% auto}
 #tokenomics .mission-copy::before{background-size:90% auto}
 #tokenomics .mission-copy::before{background-image:url('assets/print-lock-extended.png');background-size:100% auto;background-position:left center}
+
+.camp-art{z-index:2}.placed-horse{position:absolute;background-size:600% 600%;background-repeat:no-repeat;aspect-ratio:1.12;pointer-events:none}
+.horse-brown{left:83.98425196850393%;width:12.8vw;top:calc(100% - 43.70370370370374svh);z-index:3;background-image:url("assets/horse-brown.png")}
+.horse-white{left:80.07349081364829%;width:11vw;top:calc(100% - 46.98412698412703svh);z-index:1;background-image:url("assets/horse-white.png")}
