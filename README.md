@@ -42,3 +42,7 @@ Import this GitHub repository into Vercel with the included configuration, or ru
 
 
 
+
+## Hidden horse race
+The campfire horses open a confirmation dialog. dist/ride.js loads dist/race/race.html only after Yes, plays extracted audio from race/music.m4a, and returns to the sky on exit. The game sends cahoot-race-finished after the burial animation to highlight the return control. The source game remains unchanged in Pictures; deployed copies are in dist/race.
+
