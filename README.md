@@ -23,11 +23,11 @@ Open http://localhost:8000. Deploy the `dist` directory as a static site. `verce
 - `dist/refinements.css` styles the logo hero, readable parchment panels, supply chart, and responsive orbit layout.
 - `dist/assets/` contains the original sprite sheets, logo, and sky images. `sky-hd-v4.png` is the current 1920 × 5760 sky; earlier sky assets preserve prior artwork.
 
-The current high-resolution sky is constrained to the original 1:3 viewport-width display scale and moves as the page scrolls. The official X link is https://x.com/justcahoot. The supply chart shows a planned 10% lock with a 36-degree slice; launch/lock proof has not yet been provided. The flying owl sprite sheets use a 6 × 6 grid. The campfire animation uses a separate 6 × 6 sheet. The owls fade out as the campfire appears. On mobile, the campfire is positioned near the bottom and the footer disclaimer is hidden; keep the desktop disclaimer unless instructed otherwise. Respect reduced-motion preferences.
+The current high-resolution sky is constrained to the original 1:3 viewport-width display scale and moves as the page scrolls. The official X link is https://x.com/justcahoot. The supply chart shows a 10% lock with a 36-degree slice. The title and burn coin use 6 × 6 sprites; transparent PNG prints decorate the cards. The flying owl sprite sheets use a 6 × 6 grid. The campfire animation uses a separate 6 × 6 sheet. The owls fade out as the campfire appears. On mobile, the campfire is positioned near the bottom and the footer disclaimer is hidden; keep the desktop disclaimer unless instructed otherwise. Respect reduced-motion preferences.
 
 ## Content and project facts
 
-Use CAHOOT for the brand, $CAHOOT and $HOOT for tokens, Hoot for the character, and JustHoot for the platform. Pairing, the 10% supply lock, and burns are **planned**, not verified as completed. Do not invent a contract address, transaction proof, lock terms, financial returns, endorsements, or rankings. The copy-address button stays disabled until a verified address is published. The JustHoot link points to https://justhoot.fun.
+Use CAHOOT for the brand, $CAHOOT and $HOOT for tokens, Hoot for the character, and JustHoot for the platform. This edition uses owner-requested post-launch copy: pairing and the 10% supply lock are presented as completed. This is release-stage wording supplied by the owner, not independent verification; do not invent transaction links or completed burn amounts. Do not invent a contract address, transaction proof, lock terms, financial returns, endorsements, or rankings. The copy-address button stays disabled until a verified address is published. The JustHoot link points to https://justhoot.fun.
 
 ## Before shipping changes
 
@@ -36,6 +36,7 @@ Check the experience at desktop and mobile sizes, including the sky, scroll tran
 ## Deployment
 
 Import this GitHub repository into Vercel with the included configuration, or run `vercel --prod` from the repository root. The site is static and does not require environment variables.
+
 
 
 
