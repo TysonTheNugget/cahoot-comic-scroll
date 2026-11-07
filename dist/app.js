@@ -4,7 +4,6 @@ const sprites = [...document.querySelectorAll('.sprite')];
 const camp = document.querySelector('.camp');
 const progress = document.querySelector('.progress');
 const sky = document.querySelector('.sky-art');
-const titlePlay=document.querySelector('.title-play');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const lettering = [];
 document.querySelectorAll('[data-letters]').forEach(heading => {
@@ -32,10 +31,6 @@ const panels=[...document.querySelectorAll('.copy-panel,.burn-card')];
 function render(time){
  startedAt ??= time;
  const y=scrollY;
- const titleProgress=clamp(y/(height*.65));
- const titleFrame=reduced.matches?35:Math.min(35,Math.floor(titleProgress*36));
- titlePlay.style.backgroundPosition=`${titleFrame%6*20}% ${Math.floor(titleFrame/6)*20}%`;
- titlePlay.style.opacity=reduced.matches?0:1-ease(clamp((titleProgress-.45)/.35));
  sky.style.transform = `translate3d(0,${-clamp(y/end)*skyTravel}px,0)`;
  const landing=ease(clamp((y+height*.8-campTop)/(height*.5)));
  geometry.forEach(({el,top,size},i)=>{
@@ -62,7 +57,7 @@ function render(time){
   const x=Math.cos(angle)*radiusX;
   const vertical=reduced.matches?0:Math.sin(angle)*radiusY;
   const scale=reduced.matches?.8:(.5+depth*.7)*(1-landing*.2);
-  owl.style.opacity=(1-landing)*(.65+depth*.35)*ease(clamp(titleProgress/.6));
+  owl.style.opacity=(1-landing)*(.65+depth*.35);
   // Pass behind the readable signs even during the foreground half of the orbit.
   const owlX=screenWidth/2+x,owlY=height/2+vertical;
   const radius=(screenWidth<700?85:Math.min(190,screenWidth*.13))*scale*.55;
@@ -88,6 +83,7 @@ function render(time){
 addEventListener('resize',measure,{passive:true});
 addEventListener('load',measure);document.fonts.ready.then(measure);measure();requestAnimationFrame(render);
 sky.addEventListener('load',measure);
+
 
 
 
