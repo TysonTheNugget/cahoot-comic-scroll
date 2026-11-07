@@ -57,3 +57,4 @@
 .horse-brown{left:84.92307692307692%;width:13.8vw;top:calc(100% - 24.075829383886287svh);z-index:1}
 .horse-white{left:81.33333333333333%;width:12.6vw;top:calc(100% - 25.379146919431292svh);z-index:1}
 }
+@media(max-width:700px){.horse-brown,.horse-white{top:auto;bottom:calc(3% + 3.5vw);z-index:1}}
